@@ -16,4 +16,11 @@ function reportError(e) {
   $('.js-error-report').text(`Uh oh, something went wrong! Here's what we know: ${e.message}`);
 }
 
+try {
+	//code that might throw an error
+} catch(error) {
+	//code that will handle our error
+	console.error("You made a mistake");
+}
+
 $(main);
