@@ -1,5 +1,13 @@
 function main() {
   doAllTheThings();
+	try {
+		//code that might throw an error
+		doAllTheThings();
+	} catch(e) {
+		//code that will handle our error
+		console.error(e); //writes a message on the console
+		reportError(e);
+	}
 }
 
 function doAllTheThings() {
@@ -14,13 +22,6 @@ function doAllTheThings() {
 
 function reportError(e) {
   $('.js-error-report').text(`Uh oh, something went wrong! Here's what we know: ${e.message}`);
-}
-
-try {
-	//code that might throw an error
-} catch(error) {
-	//code that will handle our error
-	console.error("You made a mistake");
 }
 
 $(main);
